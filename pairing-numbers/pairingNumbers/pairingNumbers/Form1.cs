@@ -41,6 +41,7 @@ namespace pairingNumbers
         {
             int oof = 0;
             bool isTestable = int.TryParse(testBox.Text, out oof);
+            bool matchFound = false;
 
             if(!isTestable)
             {
@@ -48,7 +49,26 @@ namespace pairingNumbers
             }
             else
             {
-                MessageBox.Show("temporary success");
+                // can you find a pair of numbers whose sum equals the target number?
+                for(int i = 1; i <= numbers.Length; i++)
+                {
+                    int front = numbers[i-1];
+                    int back = numbers[numbers.Length - i];
+
+                    if (front + back == oof)
+                    {
+                        MessageBox.Show("Success! \n" + front + " + "
+                            + back + " equals: " + oof + "!");
+
+                        matchFound = true;
+                        return;
+                    }
+                }
+
+                if(!matchFound)
+                {
+                    MessageBox.Show("No matches found :(");
+                }
             }
 
 
