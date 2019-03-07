@@ -23,7 +23,7 @@ My assumptions for this question:
 * The median will be greater than 0
 * A helper function sortList() may be called to order the array, highest to lowest
 
-Code block for insertInt() function: 
+#### Code block for insertInt() function: 
 
 ```Java
 public void insertInt(int parInt) {
@@ -33,19 +33,19 @@ public void insertInt(int parInt) {
     }
 ```
 
-Code block for getMedian() function:
+#### Code block for getMedian() function:
 
 ```Java
 public double getMedian() {
         
         double median = 0;
         
-        if((listOfInts.size() % 2) != 0){
+        if((listOfInts.size() % 2) != 0){			//list is odd length
             
             int mid = (int)(listOfInts.size()/2);
             median = listOfInts.get(mid);
         }
-        else {
+        else {							//list is even length	
             int midHi, midLo;
             midHi = (int)(listOfInts.size()/2);
             midLo = (int)((listOfInts.size()/2) - 1);
