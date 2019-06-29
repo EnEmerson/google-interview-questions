@@ -13,9 +13,9 @@ Given a list containing integers in order, for example: `[1, 3, 5, 8, 12, 13, 22
 
 **I will be attempting to solve this question using `/u/SirSassyCat`'s suggestion in the reddit post.**
 
-* Iterate through the array
-* Subtract each value from the target number
-* Check if the remainder is present in the array
+1. Iterate through the array
+2. Subtract each value from the target number
+3. Check if the remainder is present in the array
 
 [Comprehensive discussion of solutions by Santiago Basulto](https://notebooks.ai/santiagobasulto/1-interview-questions-sum-of-numbers-google-9f26238f)
 
