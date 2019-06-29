@@ -12,7 +12,13 @@ namespace pairingNumbers
 {
     public partial class Form1 : Form
     {
+        // will contain the sorted list of ints
         int[] numbers = new int[10];
+
+        // inclusive
+        private static int MIN_VAL = 1;
+        // exclusive
+        private static int MAX_VAL = 31;
 
         public Form1()
         {
@@ -21,16 +27,19 @@ namespace pairingNumbers
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random beep = new Random();
-            for(int boop = 0; boop < 10; boop++)
+            // create a new random generator
+            Random rand = new Random();
+            // create 10 new random ints between the max and min values
+            for(int x = 0; x < numbers.Length; x++)
             {
-                int bip = beep.Next(1, 31);
-                numbers[boop] = bip;
+                int nextInt = rand.Next(MIN_VAL, MAX_VAL);
+                numbers[x] = nextInt;
 
             }
 
+            // sort the array of ints, ascending
             Array.Sort(numbers);
-
+            // put the sorted list of numbers into the listbox so we can see them in the UI
             foreach(int i in numbers)
             {
                 numsBox.Items.Add(i);
@@ -39,39 +48,11 @@ namespace pairingNumbers
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int oof = 0;
-            bool isTestable = int.TryParse(testBox.Text, out oof);
-            bool matchFound = false;
-
-            if(!isTestable)
-            {
-                MessageBox.Show("enter a testable integer please");
-            }
-            else
-            {
-                // can you find a pair of numbers whose sum equals the target number?
-                for(int i = 1; i <= numbers.Length; i++)
-                {
-                    int front = numbers[i-1];
-                    int back = numbers[numbers.Length - i];
-
-                    if (front + back == oof)
-                    {
-                        MessageBox.Show("Success! \n" + front + " + "
-                            + back + " equals: " + oof + "!");
-
-                        matchFound = true;
-                        return;
-                    }
-                }
-
-                if(!matchFound)
-                {
-                    MessageBox.Show("No matches found :(");
-                }
-            }
-
-
+            /*
+             * 1. Iterate through the array
+             * 2. Subtract current value from the target number
+             * 3. Check if remainder exists in array
+             */
         }
     }
 }

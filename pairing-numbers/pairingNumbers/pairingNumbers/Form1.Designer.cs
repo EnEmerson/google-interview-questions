@@ -42,7 +42,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 62);
             this.button1.TabIndex = 0;
-            this.button1.Text = "create array";
+            this.button1.Text = "Generate Numbers";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -50,39 +50,39 @@
             // 
             this.numsBox.FormattingEnabled = true;
             this.numsBox.ItemHeight = 20;
-            this.numsBox.Location = new System.Drawing.Point(42, 189);
+            this.numsBox.Location = new System.Drawing.Point(42, 176);
             this.numsBox.Name = "numsBox";
-            this.numsBox.Size = new System.Drawing.Size(133, 204);
+            this.numsBox.Size = new System.Drawing.Size(147, 244);
             this.numsBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 150);
+            this.label1.Location = new System.Drawing.Point(42, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.Size = new System.Drawing.Size(176, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "numbers:";
+            this.label1.Text = "Sorted List of Numbers:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(309, 43);
+            this.label2.Location = new System.Drawing.Point(314, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 20);
+            this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "test number:";
+            this.label2.Text = "Target number:";
             // 
             // testBox
             // 
-            this.testBox.Location = new System.Drawing.Point(313, 78);
+            this.testBox.Location = new System.Drawing.Point(318, 176);
             this.testBox.Name = "testBox";
             this.testBox.Size = new System.Drawing.Size(100, 26);
             this.testBox.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(298, 189);
+            this.button2.Location = new System.Drawing.Point(304, 231);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 87);
             this.button2.TabIndex = 5;
