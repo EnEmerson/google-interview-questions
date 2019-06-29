@@ -1,11 +1,23 @@
 # google-interview-questions
-This is a repo containing my solutions to released practice questions given by google to their interviewees.
+This is a repo containing my solutions to released practice questions given by Google to their interviewees.
 
 ---
 
 ## Can you find a pair of numbers whose sum equals the target number?
 
-[Matching pairs question](https://old.reddit.com/r/learnprogramming/comments/9vp1vv/an_interesting_problem_from_a_job_interview_at/)
+### Prompt:
+
+Given a list containing integers in order, for example: `[1, 3, 5, 8, 12, 13, 22]` and a target number, for example `16`. Can you find a pair of numbers whose sum equals the target number?
+
+[Original Reddit post that inspired the creation of this rep](https://old.reddit.com/r/learnprogramming/comments/9vp1vv/an_interesting_problem_from_a_job_interview_at/)
+
+**I will be attempting to solve this question using `/u/SirSassyCat`'s suggestion in the reddit post.**
+
+* Iterate through the array
+* Subtract each value from the target number
+* Check if the remainder is present in the array
+
+[Comprehensive discussion of solutions by Santiago Basulto](https://notebooks.ai/santiagobasulto/1-interview-questions-sum-of-numbers-google-9f26238f)
 
 ---
 
@@ -39,13 +51,16 @@ public void insertInt(int parInt) {
 public double getMedian() {
         
         double median = 0;
-        
-        if((listOfInts.size() % 2) != 0){			//list is odd length
+
+        //list is odd length
+        if((listOfInts.size() % 2) != 0){
             
             int mid = (int)(listOfInts.size()/2);
             median = listOfInts.get(mid);
         }
-        else {							//list is even length	
+
+	//list is even length
+        else {		
             int midHi, midLo;
             midHi = (int)(listOfInts.size()/2);
             midLo = (int)((listOfInts.size()/2) - 1);
