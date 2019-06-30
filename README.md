@@ -17,6 +17,57 @@ Given a list containing integers in order, for example: `[1, 3, 5, 8, 12, 13, 22
 2. Subtract each value from the target number
 3. Check if the remainder is present in the array
 
+#### Code block for the sum check logic:
+
+```C#
+private void button2_Click(object sender, EventArgs e)
+{
+	/* Algorithm:
+	* 1. Iterate through the array
+	* 2. Subtract current value from the target number
+	* 3. Check if remainder exists in array
+	*/
+
+	// check if target number data is valid
+	int targetNumber = 0;
+	bool goodData = Int32.TryParse(testBox.Text, out targetNumber);
+	if (goodData && (MIN_VAL <= targetNumber))
+	{
+		// set target number from the test box input
+                targetNumber = int.Parse(testBox.Text);
+                // 1. begin iteration thru numbers array
+                for (int num = 0; num < numbers.Length; num++)
+                {
+			int currentNumber = numbers[num];
+                    	// 2. subtract current value from the target number
+                    	int remainder = targetNumber - currentNumber;
+                    	// 3a. iterate through rest of array
+                    	for (int checkNum = num + 1; checkNum < numbers.Length; checkNum++)
+                    	{
+                        	int nextNumber = numbers[checkNum];
+                        	// 3b. check if remainder is in the array
+                        	if (remainder == nextNumber)
+                        	{
+                            		// found a match!
+                            		MessageBox.Show("Match found! \r\n'"
+                                		+ currentNumber + "' at index: [" + num + "]"
+                                		+ "\r\n AND \r\n'"
+                                		+ nextNumber + "' at index: [" + checkNum + "]\r\n"
+                                		+ " add up to the target number: '" + targetNumber + "'");
+                            		Application.Exit();
+                        	}
+			}
+		}
+                // none of the numbers match
+		MessageBox.Show("No two integers in this list add up to the target number.");
+	}
+	else
+	{
+                MessageBox.Show("Bad input data");
+	}
+}
+```
+
 [Comprehensive discussion of solutions by Santiago Basulto](https://notebooks.ai/santiagobasulto/1-interview-questions-sum-of-numbers-google-9f26238f)
 
 ---
