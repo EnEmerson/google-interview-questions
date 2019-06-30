@@ -67,8 +67,9 @@ private void button2_Click(object sender, EventArgs e)
 	}
 }
 ```
+[My full solution here](https://github.com/EnEmerson/google-interview-questions/blob/master/pairing-numbers/pairingNumbers/pairingNumbers/Form1.cs)
 
-[Comprehensive discussion of solutions by Santiago Basulto](https://notebooks.ai/santiagobasulto/1-interview-questions-sum-of-numbers-google-9f26238f)
+[Comprehensive discussion of potential solutions by Santiago Basulto](https://notebooks.ai/santiagobasulto/1-interview-questions-sum-of-numbers-google-9f26238f)
 
 ---
 

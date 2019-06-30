@@ -12,11 +12,8 @@ namespace pairingNumbers
 {
     public partial class Form1 : Form
     {
-        // will contain the sorted list of ints
         int[] numbers = new int[10];
-        // inclusive
         private static int MIN_VAL = 1;
-        // exclusive
         private static int MAX_VAL = 31;
 
         public Form1()
