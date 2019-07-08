@@ -126,3 +126,5 @@ public double getMedian() {
 [My full solution here](https://github.com/EnEmerson/google-interview-questions/blob/master/aitp-interview/src/IntegerCollection.java)
 
 ---
+
+## Given an unsorted array of integers find two indeces i & j, such that i < j and the difference between i and j is the largest in the array. Bonus: only use one loop.
